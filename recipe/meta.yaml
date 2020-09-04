@@ -1,0 +1,39 @@
+{% set name = "bibtexparser" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "df8966ea752db6d74657a69b9d684a61aa33457ad6d9d50e41c50ef7f374907f" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - future >=0.16
+    - pyparsing >=2.0.3
+
+test:
+  imports:
+    - bibtexparser
+
+about:
+  home: https://bibtexparser.readthedocs.org
+  license: LGPLv3 or BSD
+  # TODO: remove once the file is included into the distribution on PyPI.
+  # See https://github.com/sciunto-org/python-bibtexparser/issues/270.
+  license_file: COPYING
+  summary: A module for parsing BibTeX files
+  doc_url: https://bibtexparser.readthedocs.org
+  dev_url: https://github.com/sciunto-org/python-bibtexparser
