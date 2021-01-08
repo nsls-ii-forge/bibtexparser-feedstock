@@ -5,11 +5,13 @@ Home: https://bibtexparser.readthedocs.org
 
 Package license: LGPLv3 or BSD
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/bibtexparser-feedstock/blob/master/LICENSE.txt)
 
 Summary: A module for parsing BibTeX files
 
+Development: https://github.com/sciunto-org/python-bibtexparser
 
+Documentation: https://bibtexparser.readthedocs.org
 
 Current build status
 ====================
